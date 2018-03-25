@@ -2,9 +2,10 @@ package MiniNet;
 import java.util.ArrayList;
 import java.util.List;
 //Author:JiaQi Tang s3598284
-public class ChildrenList {
+public class ChildrenList extends Children{
 	public List childrenToSelect;
-	public ChildrenList() {
+	public ChildrenList(String children) {
+		super(children);
 		this.childrenToSelect=new ArrayList();
 	}
 	public void AddChildren() {

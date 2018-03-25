@@ -2,9 +2,10 @@ package MiniNet;
 import java.util.ArrayList;
 import java.util.List;
 //Author:JiaQi Tang s3598284
-public class ParentsList {
+public class ParentsList extends Parents{
 	public List parentsToSelect;
-	public ParentsList() {
+	public ParentsList(String parents1,String parents2) {
+		super(parents1,parents2);
 		this.parentsToSelect=new ArrayList();
 	}
 	public void AddParents() {

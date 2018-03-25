@@ -2,9 +2,10 @@ package MiniNet;
 import java.util.ArrayList;
 import java.util.List;
 //Author:JiaQi Tang s3598284
-public class AgeList {
+public class AgeList extends Age{
 	public List ageToSelect;
-	public AgeList() {
+	public AgeList(int age) {
+		super(age);
 		this.ageToSelect=new ArrayList();
 	}
 	public void AddAge() {
