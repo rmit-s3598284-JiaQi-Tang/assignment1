@@ -2,9 +2,10 @@ package MiniNet;
 import java.util.ArrayList;
 import java.util.List;
 //Author:JiaQi Tang s3598284
-public class ImageList {
+public class ImageList extends Image{
 	public List imageToSelect;
-	public ImageList() {
+	public ImageList(int image) {
+		super(image);
 		this.imageToSelect=new ArrayList();
 	}
 	public void AddImage() {

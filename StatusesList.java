@@ -1,10 +1,11 @@
 package MiniNet;
 import java.util.ArrayList;
 import java.util.List;
-public class StatusesList {
+public class StatusesList extends Status{
 public List statusesToSelect;
 //Author:JiaQi Tang s3598284
-public StatusesList() {
+public StatusesList(String status) {
+	super(status);
 	this.statusesToSelect=new ArrayList();
 }
 public void AddStatus() {

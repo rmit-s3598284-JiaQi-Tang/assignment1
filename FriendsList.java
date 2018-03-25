@@ -2,9 +2,10 @@
 import java.util.ArrayList;
 import java.util.List;
 //Author:JiaQi Tang s3598284
-public class FriendsList {
+public class FriendsList extends Friends{
 	public List friendsToSelect;
-	public FriendsList() {
+	public FriendsList(String friends) {
+		super(friends);
 		this.friendsToSelect=new ArrayList();
 	}
 	public void AddFriends() {

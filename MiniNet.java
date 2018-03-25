@@ -7,13 +7,14 @@ import java.util.Scanner;
 public class MiniNet {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		NameList nameList=new NameList();
-		AgeList ageList=new AgeList();
-		ImageList imageList=new ImageList();
-		StatusesList statusesList=new StatusesList();
-		ParentsList parentsList=new ParentsList();
-		ChildrenList childrenList=new ChildrenList();
-		FriendsList friendsList=new FriendsList();
+		NameList nameList=new NameList(null);
+		AgeList ageList=new AgeList(0);
+		ImageList imageList=new ImageList(0);
+		StatusesList statusesList=new StatusesList(null);
+		ParentsList parentsList=new ParentsList(null,null);
+		ChildrenList childrenList=new ChildrenList(null);
+		FriendsList friendsList=new FriendsList(null);
+		//use constructors to create objects
 		nameList.AddName();
 		ageList.AddAge();
 		imageList.AddImage();
@@ -21,6 +22,8 @@ public class MiniNet {
 		parentsList.AddParents();
 		childrenList.AddChildren();
 		friendsList.AddFriends();
+		//use the above methods to add variables and arrays to Lists
+		//the data of the system has been initialed
 System.out.println("Welcome to MiniNet !");
 System.out.println("1.List everyone");
 System.out.println("2.Select a person");

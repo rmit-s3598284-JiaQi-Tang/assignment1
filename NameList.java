@@ -2,9 +2,10 @@ package MiniNet;
 import java.util.ArrayList;
 import java.util.List;
 //Author:JiaQi Tang s3598284
-public class NameList {
+public class NameList extends Name{
 	public List nameToSelect;
-	public NameList() {
+	public NameList(String name) {
+		super(name);
 		this.nameToSelect=new ArrayList();
 	}
 	public void AddName() {
