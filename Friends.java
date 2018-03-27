@@ -18,4 +18,7 @@ public class Friends {
 		}
 		return i;
 	}
+	public void changeFriendsList(String[] i) {
+		this.friends=i;
+	}
 }
