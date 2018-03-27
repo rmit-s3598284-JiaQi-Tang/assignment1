@@ -24,23 +24,29 @@ public class MiniNet {
 		friendsList.AddFriends();
 		//use the above methods to add variables and arrays to Lists
 		//the data of the system has been initialed
-System.out.println("Welcome to MiniNet !");
-System.out.println("1.List everyone");
-System.out.println("2.Select a person");
-System.out.println("3.Add a New person");
-System.out.println("Enter an option:_");
+		int p=0;
+		//set a variable as a condition statement to loop the whole system
+while(p==0) {
+  System.out.println("=====================");
+  System.out.println("Welcome to MiniNet !");
+  System.out.println("1.List everyone");
+  System.out.println("2.Select a person");
+  System.out.println("3.Add a New person");
+  System.out.println("4.Exit");
+  System.out.println("Enter an option:_");
+  System.out.println("=====================");
 //print the first menu on console
-Scanner reader=new Scanner(System.in);
+  Scanner reader=new Scanner(System.in);
 //define a scanner to read the user's option
-int i;
+  int i;
 //define an integer to store the number which the user input
-String select=reader.next();
+  String select=reader.next();
 //define a string variable to see whether the input is an Integer
-while(true) {
+  while(true) {
 	try {i=Integer.parseInt(select);
 	break;}
 //if "s" is an integer so "i"="s"
-catch(Exception e) {
+  catch(Exception e) {
 	System.out.println("Please give a number!");
 	System.out.println("1.List everyone");
 	System.out.println("2.Select a person");
@@ -51,12 +57,12 @@ catch(Exception e) {
 //if "s" is not an integer the system will run again and waiting for new input
 }
 
-if(i==1) {
+  if(i==1) {
 	for(int j=0;j<nameList.nameToSelect.size();j++) {
 	System.out.println(j+".Name:"+nameList.GetName(j)+" Age:"+ageList.GetAge(j)+" Status:"+statusesList.GetStatus(j));
 	}
-}
-if(i==2) {
+  }
+  if(i==2) {
 	for(int j=0;j<nameList.nameToSelect.size();j++) {
 		System.out.println(j+".Name:"+nameList.GetName(j)+" Age:"+ageList.GetAge(j)+" Status:"+statusesList.GetStatus(j));
 		}
@@ -144,7 +150,7 @@ if(i==2) {
 	     statusesList.ChangeStatus(y,s);
 	     System.out.println(nameList.GetName(y)+"'s status has been changed successfully!");
 	     System.out.println(y+".Name:"+nameList.GetName(y)+" Age:"+ageList.GetAge(y)+" Status:"+s);
-	     newStatus.close();
+	     /**newStatus.close();**/
 	}
 	  if(z==2) {
 		System.out.println(nameList.GetName(y)+" is no longer in this system !");
@@ -205,8 +211,8 @@ if(i==2) {
 		friendsList.ChangeFriends(fId,a);
 		friendsList.ChangeFriends(y, b);
 		System.out.println(nameList.GetName(y)+"'s and "+nameList.GetName(fId)+"'s friends list has been updated !");
-		System.out.println(nameList.GetName(y)+"'s "+"friends are : "+friendsList.GetFriends(y));
-     	System.out.println(nameList.GetName(fId)+"'s "+"friends are : "+friendsList.GetFriends(fId));
+		System.out.println(nameList.GetName(y)+"'s "+"friends are : "+Arrays.toString(friendsList.GetFriends(y)));
+     	System.out.println(nameList.GetName(fId)+"'s "+"friends are : "+Arrays.toString(friendsList.GetFriends(fId)));
 	}
 	  if(z==7) {
 			System.out.println("Please enter the name of the person's father(the father must exist in the system) :_");
@@ -217,8 +223,8 @@ if(i==2) {
 			String giveNewParents2=addNewParents2.next();
 			parentsList.GiveNewParents(y,giveNewParents1,giveNewParents2);
 	      	System.out.println(nameList.GetName(y)+"'s "+"parents are : "+parentsList.GetParents(y));
-			addNewParents1.close();
-			addNewParents2.close();
+			/**addNewParents1.close();
+			addNewParents2.close();**/
 	  }
 	  if(z==8) {
 			System.out.println("Profile Picture 1 :");
@@ -298,9 +304,9 @@ if(i==2) {
 				}
 			   System.out.println(nameList.GetName(y)+"'s"+"profile picture has been changed successfully !");
 	  }
-	reader2b.close();
-}
-if(i==3) {
+	/**reader2b.close();**/
+  }
+  if(i==3) {
 	//Ask the User to input the name
 	System.out.println("Please enter the new person's name :_");
 	Scanner setNewName=new Scanner(System.in);
@@ -367,20 +373,16 @@ if(i==3) {
 	Scanner setNewFriends=new Scanner(System.in);
 	String newFriends=setNewFriends.next();
 	friendsList.AddNewFriends(newFriends);
-	//
-	setNewName.close();
-	setNewAge.close();
-	setNewImage.close();
-	setNewStatus.close();
-	setNewParents1.close();
-	setNewParents2.close();
-	setNewChildren.close();
-	setNewFriends.close();
 	System.out.println("the new person has been added sucessfully!");
 	for(int j=0;j<nameList.nameToSelect.size();j++) {
 		System.out.println(j+".Name:"+nameList.GetName(j)+" Age:"+ageList.GetAge(j)+" Status:"+statusesList.GetStatus(j));
 		}
    }
+  if(i==4) {
+	p=1;
+	//now the condition statement variable "p" is no longer 0, the system will stop looping
+  }
+}
 }
 }
 
