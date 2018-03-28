@@ -8,7 +8,7 @@ public class ImageList extends Image{
 		super(image);
 		this.imageToSelect=new ArrayList();
 	}
-	public void AddImage() {
+	public void addImage() {
 		//for adding id into idToSelect
 		Image a0=new Image(1);
 		Image a1=new Image(2);
@@ -29,18 +29,18 @@ public class ImageList extends Image{
 		imageToSelect.add(7,a7);
 		imageToSelect.add(8,a8);
 	}
-	public int GetImage(int i) {
+	public int getImageFromList(int i) {
 	    Image image=(Image) imageToSelect.get(i);
 		return image.getImage();
 	}
-	public void DeleteImage(int i) {
+	public void deleteImage(int i) {
 		imageToSelect.remove(i);
 	}
-	public void AddNewImage(int i) {
+	public void addNewImage(int i) {
 		Image a=new Image(i);
 		imageToSelect.add(imageToSelect.size(),a);
 	}
-	public void ChangeImage(int i,int n) {
+	public void changeImage(int i,int n) {
 		imageToSelect.set(i,n);
 }
 }

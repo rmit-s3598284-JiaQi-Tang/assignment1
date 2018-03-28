@@ -8,7 +8,7 @@ public class ParentsList extends Parents{
 		super(parents1,parents2);
 		this.parentsToSelect=new ArrayList();
 	}
-	public void AddParents() {
+	public void addParents() {
 		Parents p0=new Parents(null,null);
 		Parents p1=new Parents(null,null);
 		Parents p2=new Parents(null,null);
@@ -28,19 +28,19 @@ public class ParentsList extends Parents{
 		parentsToSelect.add(7,p7);
 		parentsToSelect.add(8,p8);
 	}
-	public String[] GetParents(int i) {
+	public String[] getParentsFromList(int i) {
 		        Parents parents=(Parents) parentsToSelect.get(i);
 				return parents.getParents();
 	}
-	public void DeleteParents(int i) {
+	public void deleteParents(int i) {
 		parentsToSelect.remove(i);
 	}
-	public void AddNewParents(String i,String j) {
+	public void addNewParents(String i,String j) {
 		Parents p=new Parents(i,j);
 		parentsToSelect.add(parentsToSelect.size(),p);
 	}
-	public void GiveNewParents(int x,String i,String j) {
+	public void giveNewParents(int x,String i,String j) {
 		String[] a= {i,j};
 		parentsToSelect.set(x, a);
-	}
+	}//when the system add a new person, we use this method to initial the person's parents list(usually null)
 }

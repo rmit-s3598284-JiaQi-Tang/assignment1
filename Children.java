@@ -11,10 +11,9 @@ public class Children {
 		this.children[0]=children;
 	}
 	public String[] getChildren() {
-		String[]i=new String[children.length];
-		for(int j=0;j<children.length;j++) {
-		i[j]=this.children[j];
-		}
-		return i;
+		return children;
+	}
+	public void changeChildrenList(String[] i) {
+		this.children=i;
 	}
 }
