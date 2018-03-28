@@ -8,7 +8,7 @@ public StatusesList(String status) {
 	super(status);
 	this.statusesToSelect=new ArrayList();
 }
-public void AddStatus() {
+public void addStatus() {
 	//for adding status into statusesToSelect
 	Status s0=new Status("Blonde hair");
 	Status s1=new Status("Big muscles");
@@ -29,17 +29,19 @@ public void AddStatus() {
 	statusesToSelect.add(7,s7);
 	statusesToSelect.add(8,s8);
 }
-public String GetStatus(int i) {
+public String getStatusFromList(int i) {
     Status status=(Status) statusesToSelect.get(i);
 	return status.getStatus();
 }
-public void DeleteStatus(int i) {
+public void deleteStatus(int i) {
 	statusesToSelect.remove(i);
 }
-public void ChangeStatus(int i,String n) {
-	statusesToSelect.set(i,n);
+public void changeStatus(int i,String n) {
+	Status status=(Status) statusesToSelect.get(i);
+	status.setStatus(n);
+	statusesToSelect.set(i,status);
 }
-public void AddNewStatus(String i) {
+public void addNewStatus(String i) {
 	Status s=new Status(i);
 	statusesToSelect.add(statusesToSelect.size(),s);
 }

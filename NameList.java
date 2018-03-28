@@ -8,7 +8,7 @@ public class NameList extends Name{
 		super(name);
 		this.nameToSelect=new ArrayList();
 	}
-	public void AddName() {
+	public void addName() {
 		//for adding status into statusesToSelect
 		Name n0=new Name("Alice");
 		Name n1=new Name("Bob");
@@ -29,18 +29,18 @@ public class NameList extends Name{
 		nameToSelect.add(7,n7);
 		nameToSelect.add(8,n8);
 	}
-	public String GetName(int i) {
+	public String getNameFromList(int i) {
 		        Name name=(Name) nameToSelect.get(i);
 				return name.getName();
 	}
-	public void DeleteName(int i) {
+	public void deleteName(int i) {
 		nameToSelect.remove(i);
 	}
-	public void AddNewName(String i) {
+	public void addNewName(String i) {
 		Name n=new Name(i);
 		nameToSelect.add(nameToSelect.size(),n);
 	}
-	public int FindName(String i) {
+	public int findName(String i) {
 		int j=0;
 		while(j>=0) {
 	        Name name=(Name) nameToSelect.get(j);
@@ -51,5 +51,5 @@ public class NameList extends Name{
 			j=j+1;
 		}
 		return j;
-	}
+	}//this method is to find where the list stored the name,so that the system can select people by name
 }

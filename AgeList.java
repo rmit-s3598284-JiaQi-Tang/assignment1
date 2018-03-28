@@ -8,7 +8,7 @@ public class AgeList extends Age{
 		super(age);
 		this.ageToSelect=new ArrayList();
 	}
-	public void AddAge() {
+	public void addAge() {
 		//for adding id into idToSelect
 		Age a0=new Age(28);
 		Age a1=new Age(29);
@@ -29,14 +29,14 @@ public class AgeList extends Age{
 		ageToSelect.add(7,a7);
 		ageToSelect.add(8,a8);
 	}
-	public int GetAge(int i) {
+	public int getAgeFromList(int i) {
 	    Age age=(Age) ageToSelect.get(i);
 		return age.getAge();
 	}
-	public void DeleteAge(int i) {
+	public void deleteAge(int i) {
 		ageToSelect.remove(i);
 	}
-	public void AddNewAge(int i) {
+	public void addNewAge(int i) {
 		Age a=new Age(i);
 		ageToSelect.add(ageToSelect.size(),a);
 	}

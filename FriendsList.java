@@ -8,7 +8,7 @@ public class FriendsList extends Friends{
 		super(friends);
 		this.friendsToSelect=new ArrayList();
 	}
-	public void AddFriends() {
+	public void addFriends() {
 		Friends f0=new Friends("Don");
 		Friends f1=new Friends("Eddie");
 		Friends f2=new Friends(null);
@@ -28,14 +28,14 @@ public class FriendsList extends Friends{
 		friendsToSelect.add(7,f7);
 		friendsToSelect.add(8,f8);
 	}
-	public String[] GetFriends(int i) {
+	public String[] getFriendsFromList(int i) {
 		      Friends friends=(Friends) friendsToSelect.get(i);
 			  return friends.getFriends();
 	}
-	public void DeleteFriends(int i) {
+	public void deleteFriends(int i) {
 		friendsToSelect.remove(i);
 	}
-	public void ChangeFriends(int i,String n) {
+	public void changeFriends(int i,String n) {
 		Friends friends=(Friends) friendsToSelect.get(i);
 		String[] newFriendsList=friends.getFriends();
 		int y=0;
@@ -50,8 +50,8 @@ public class FriendsList extends Friends{
 		friends.changeFriendsList(newFriendsList);
 		friendsToSelect.set(i,friends);
 	}
-	public void AddNewFriends(String i) {
+	public void addNewFriends(String i) {
 		Friends f=new Friends(i);
 		friendsToSelect.add(friendsToSelect.size(),f);
-	}
+	}//when the system add a new person, we use this method to initial the person's friends list(usually null)
 }

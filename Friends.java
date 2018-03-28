@@ -11,12 +11,7 @@ public class Friends {
 		this.friends[0]=friends;
 	}
 	public String[] getFriends() {
-		String[]i;
-		i=new String[friends.length];
-		for(int j=0;j<friends.length;j++) {
-		i[j]=this.friends[j];
-		}
-		return i;
+		return friends;
 	}
 	public void changeFriendsList(String[] i) {
 		this.friends=i;

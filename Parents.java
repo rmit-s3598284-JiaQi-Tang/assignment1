@@ -13,10 +13,9 @@ public class Parents {
 		this.parents[1]=parents2;
 	}
 	public String[] getParents() {
-		String[]i;
-		i=new String[2];
-		i[0]=this.parents[0];
-		i[1]=this.parents[1];
-		return i;
+		return parents;
+	}
+	public void changeParentsList(String[] i) {
+		this.parents=i;
 	}
 }
